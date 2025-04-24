@@ -90,6 +90,12 @@
           <p class="text" v-html="item.text"></p>
         </div>
       </div>
+      <!-- <div class="video-card">
+        <video controls>
+          <source src="../assets/yangqi.mp4" type="video/mp4" />
+        </video>
+        <div class="video-title">课余拉练风采</div>
+      </div> -->
       <!-- 产业 -->
       <div class="estate">
         <div
@@ -412,5 +418,8 @@ export default {
   display: block;
   content: "";
   margin: 8px 0;
+}
+.video-card {
+  height: 400px;
 }
 </style>

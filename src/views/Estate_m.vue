@@ -6,139 +6,94 @@
       >加载中...</van-loading
     >
 
-    <div v-if="this.$route.query.id === 1 && isShowContent">
-      <div style="display: flex; justify-content: center;">
-        <span
-          style="font-size: 18px;color:burlywood;font-weight: bold;margin-bottom: 20px;margin-top: 10px;"
-          >合作院校</span
-        >
+    <div
+      v-if="this.$route.query.id === 1 && isShowContent"
+      class="page-content page-content-1"
+    >
+      <div class="page-header">
+        <h1>合作院校</h1>
+        <div class="header-decoration"></div>
       </div>
-      <img
-        class="optionImg"
-        style="width: 100%;height: 120px; display: block"
-        src="../assets/0_common_M/hezuoyuanxiao.jpg"
-        alt=""
-      />
-      <div class="content">
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >山东铝业职业学院</span
-          >
+      <div class="school-list">
+        <div class="school-card">
+          <div class="school-name">山东铝业职业学院</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/shandonglvye.png"
-            alt=""
+            alt="山东铝业职业学院"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >滨州职业学院</span
-          >
+        <div class="school-card">
+          <div class="school-name">滨州职业学院</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/binzhouzhiye.png"
-            alt=""
+            alt="滨州职业学院"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >山东力明科技职业学院</span
-          >
+        <div class="school-card">
+          <div class="school-name">山东力明科技职业学院</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/shandongliming.png"
-            alt=""
+            alt="山东力明科技职业学院"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >济宁职业技术学院</span
-          >
+        <div class="school-card">
+          <div class="school-name">济宁职业技术学院</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/jiningzhiye.png"
-            alt=""
+            alt="济宁职业技术学院"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >烟台春山技工学校</span
-          >
+        <div class="school-card">
+          <div class="school-name">烟台春山技工学校</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/yantaichunshan.png"
-            alt=""
+            alt="烟台春山技工学校"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >青岛中工技工学校</span
-          >
+        <div class="school-card">
+          <div class="school-name">青岛中工技工学校</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/qingdaozhonggong.png"
-            alt=""
+            alt="青岛中工技工学校"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >德州近博技工学校
-          </span>
+        <div class="school-card">
+          <div class="school-name">德州近博技工学校</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/dezhoujinbo.png"
-            alt=""
+            alt="德州近博技工学校"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >山东深泉技师学院</span
-          >
+        <div class="school-card">
+          <div class="school-name">山东深泉技师学院</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/shandongshenquan.jpg"
-            alt=""
+            alt="山东深泉技师学院"
           />
         </div>
-        <div class="picText">
-          <span style="font-size: 14px;color:burlywood;font-weight: bold;"
-            >威海高级技工学校</span
-          >
+        <div class="school-card">
+          <div class="school-name">威海高级技工学校</div>
           <img
-            width="100%;"
-            height="160px"
-            style="margin-top: 10px;"
+            class="school-image"
             src="../assets/0_common_M/weihaigaoji.png"
-            alt=""
+            alt="威海高级技工学校"
           />
         </div>
       </div>
     </div>
-    <div v-if="this.$route.query.id === 2 && isShowContent">
-      <!-- <img
-        width="100%"
-        height="100px"
-        src="../assets/0_common/page_nav_back_old.png"
-        alt=""
-      /> -->
+    <div
+      v-if="this.$route.query.id === 2 && isShowContent"
+      class="page-content page-content-2"
+    >
       <!-- 视频部分 -->
-
       <div style="padding:10px">
         <span
           style="display: block;margin-top: 10px; color: #616161;opacity: 0.8;font-weight: 700;padding-top: 6px;"
@@ -206,168 +161,84 @@
         <br />
       </div>
     </div>
-    <div class="estate3" v-if="this.$route.query.id === 3 && isShowContent">
-      <div class="education-container">
-        <!-- 学历教育部分 -->
-        <div class="education-card">
-          <div class="card-header">
-            <h2>学历教育</h2>
-            <div class="header-decoration"></div>
-          </div>
-          <div class="card-content">
-            <div class="info-row">
-              <span class="info-label">热门专业</span>
-              <span class="info-value">工业机器人</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">学习学制</span>
-              <span class="info-value">三年制</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">学习目标</span>
-              <span class="info-value">取得大学学历（3+3、3+4升学培养）</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">报名对象</span>
-              <span class="info-value">应、往届初中毕业生</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">要求年龄</span>
-              <span class="info-value">15周岁以上</span>
-            </div>
-          </div>
+    <div
+      v-if="this.$route.query.id === 3 && isShowContent"
+      class="page-content page-content-3"
+    >
+      <img width="100%" src="../assets/edu.jpg" alt="" />
+    </div>
+    <div
+      v-if="this.$route.query.id === 4 && isShowContent"
+      class="page-content page-content-4"
+    >
+      <div class="mission-container">
+        <div class="mission-header">
+          <h1>企业使命与愿景</h1>
+          <div class="header-decoration"></div>
         </div>
 
-        <!-- 高级技工部分 -->
-        <div class="education-card">
-          <div class="card-header">
-            <h2>高级技工</h2>
-            <div class="header-decoration"></div>
-          </div>
-          <div class="card-content">
-            <div class="sub-section">
-              <h3>应届初中生</h3>
-              <div class="info-row">
-                <span class="info-label">学习学制</span>
-                <span class="info-value">3+2高级技工</span>
-              </div>
+        <div class="mission-grid">
+          <div class="mission-card">
+            <div class="mission-icon">
+              <i class="fas fa-bullseye"></i>
             </div>
-            <div class="sub-section">
-              <h3>应、往届高中、技工、中专毕业生</h3>
-              <div class="info-row">
-                <span class="info-label">学习学制</span>
-                <span class="info-value">高中起点（3年制）</span>
-              </div>
-              <div class="info-row">
-                <span class="info-label">学习目标</span>
-                <span class="info-value">取得大学学历（3+3、3+4升学培养）</span>
-              </div>
-              <div class="info-row">
-                <span class="info-label">报名对象</span>
-                <span class="info-value">应、往届初中毕业生</span>
-              </div>
-              <div class="info-row">
-                <span class="info-label">要求年龄</span>
-                <span class="info-value">15周岁以上</span>
-              </div>
+            <h2>使命</h2>
+            <div class="mission-content">
+              <h3>核心理念</h3>
+              <p>培养兼具知识与技能的时代栋梁</p>
             </div>
           </div>
-        </div>
 
-        <!-- 短期培训部分 -->
-        <div class="education-card">
-          <div class="card-header">
-            <h2>短期培训</h2>
-            <div class="header-decoration"></div>
-          </div>
-          <div class="card-content">
-            <div class="info-row">
-              <span class="info-label">培养专业</span>
-              <span class="info-value">工业机器人</span>
+          <div class="mission-card">
+            <div class="mission-icon">
+              <i class="fas fa-star"></i>
             </div>
-            <div class="info-row">
-              <span class="info-label">培训时长</span>
-              <span class="info-value">7—10个月</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">培养内容</span>
-              <span class="info-value">工业机器人的操作、安装、调试、维修、维护、编程和设计</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">学习目标</span>
-              <span class="info-value">高薪资、保对口就业</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">招生对象</span>
-              <span class="info-value">初中、中专、高中、大专、本科、退伍军人、社会青年</span>
-            </div>
-            <div class="info-row">
-              <span class="info-label">要求年龄</span>
-              <span class="info-value">17一28岁</span>
+            <h2>价值观</h2>
+            <div class="mission-content">
+              <ul>
+                <li>
+                  <span class="highlight">育人至上</span>
+                  <p>始终将学生发展放在首位，因材施教</p>
+                </li>
+                <li>
+                  <span class="highlight">专业精进</span>
+                  <p>持续更新教学内容，提供高质量教育服务</p>
+                </li>
+                <li>
+                  <span class="highlight">诚信协作</span>
+                  <p>秉承诚实守信原则，在各个环节保持真诚</p>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
 
-        <!-- 机器人人才说明部分 -->
-        <div class="robot-talent-card">
-          <p>
-            <span class="highlight">集团在工业机器人的人才培养</span>
-            具备了独一无二的优势，本着"<span class="quote">优势互补、合作共赢</span>"的原则，共同培养
-            <span class="highlight">工业机器人专业人才</span>，以满足企业急需且日益增长的
-            <span class="highlight">工业机器人专业人才需求</span>。
-          </p>
+          <div class="mission-card">
+            <div class="mission-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h2>愿景</h2>
+            <div class="mission-content">
+              <p>
+                成为教育领域的标杆，以卓越的教育质量和创新的教育模式，培养出优秀人才
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div v-if="this.$route.query.id === 4 && isShowContent">
-      <div class="presentation-container">
-        <section class="slide">
-          <h1 class="title">使命</h1>
-          <div class="content">
-            <div class="text-content">
-              <h2>核心理念</h2>
-              <p>培养兼具知识与技能的时代栋梁。</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide">
-          <h2 class="title">价值观</h2>
-          <div class="content">
-            <ul class="values-list">
-              <li>
-                <strong>育人至上：</strong>始终将学生发展放在首位，因材施教。
-              </li>
-              <li>
-                <strong>专业精进：</strong
-                >持续更新教学内容，提供高质量教育服务。
-              </li>
-              <li>
-                <strong>诚信协作：</strong
-                >秉承诚实守信原则，在各个环节保持真诚。
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="slide">
-          <h2 class="title">愿景</h2>
-          <div class="content">
-            <p>
-              成为教育领域的标杆，以卓越的教育质量和创新的教育模式，培养出优秀人才。
-            </p>
-          </div>
-        </section>
-      </div>
+    <div
+      v-if="this.$route.query.id === 5 && isShowContent"
+      class="page-content page-content-5"
+    >
+      <contactUs></contactUs>
     </div>
-    <contactUs v-if="this.$route.query.id === 5 && isShowContent"></contactUs>
     <!-- 校长介绍人工智能 -->
     <div
-      style="padding: 10px;"
       v-if="this.$route.query.id === 6 && isShowContent"
+      class="page-content page-content-6"
     >
       <!-- 视频部分 -->
-      <div class="video-container">
+      <div class="video-section">
         <video width="100%" controls>
           <source src="../assets/校长介绍人工智能.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -436,8 +307,8 @@
     </div>
     <!-- 教师风采 -->
     <div
-      style="padding: 10px;"
       v-if="this.$route.query.id === 7 && isShowContent"
+      class="page-content page-content-7"
     >
       <img width="100%" src="../assets/pic3.jpg" alt="" />
       <img width="100%" src="../assets/pic4.jpg" alt="" />
@@ -446,59 +317,70 @@
     </div>
     <!-- 学生风采 8 -->
     <div
-      style="padding:10px"
       v-if="this.$route.query.id === 8 && isShowContent"
+      class="page-content page-content-8"
     >
-      <div
-        v-if="this.$route.query.id === 8 && isShowContent"
-        style="padding: 10px;"
-      >
-        <!-- Tab 控制 -->
-        <div class="tabs">
-          <button @click="setActiveTab(1)" :class="{ active: activeTab === 1 }">
-            听听学生真心话
-          </button>
-          <button @click="setActiveTab(2)" :class="{ active: activeTab === 2 }">
-            学习风采
-          </button>
-          <button @click="setActiveTab(3)" :class="{ active: activeTab === 3 }">
-            课余拉练风采
-          </button>
-          <button @click="setActiveTab(4)" :class="{ active: activeTab === 4 }">
-            课余校内风采
-          </button>
+      <div class="student-container">
+        <div class="student-header">
+          <h1>学生风采</h1>
+          <div class="header-decoration"></div>
         </div>
 
-        <!-- 视频展示 -->
-        <div v-if="activeTab === 1" class="video-container">
-          <video width="100%" controls>
-            <source src="../assets/学生风采4.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div v-if="activeTab === 1" class="video-container">
-          <video width="100%" controls>
-            <source src="../assets/学生风采5.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div v-if="activeTab === 2" class="video-container">
-          <video width="100%" controls>
-            <source src="../assets/学生风采1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div v-if="activeTab === 3" class="video-container">
-          <video width="100%" controls>
-            <source src="../assets/学生风采3.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div v-if="activeTab === 4" class="video-container">
-          <video width="100%" controls>
-            <source src="../assets/学生风采2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button
+              v-for="(tab, index) in tabs"
+              :key="index"
+              @click="setActiveTab(index + 1)"
+              :class="{ active: activeTab === index + 1 }"
+            >
+              {{ tab }}
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <div v-if="activeTab === 1" class="video-grid">
+              <div class="video-card">
+                <video controls>
+                  <source src="../assets/学生风采4.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">听听学生真心话</div>
+              </div>
+              <div class="video-card">
+                <video controls>
+                  <source src="../assets/学生风采5.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">听听学生真心话</div>
+              </div>
+            </div>
+
+            <div v-if="activeTab === 2" class="video-grid">
+              <div class="video-card">
+                <video controls>
+                  <source src="../assets/学生风采1.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">学习风采</div>
+              </div>
+            </div>
+
+            <div v-if="activeTab === 3" class="video-grid">
+              <div class="video-card">
+                <video controls>
+                  <source src="../assets/学生风采3.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">课余拉练风采</div>
+              </div>
+            </div>
+
+            <div v-if="activeTab === 4" class="video-grid">
+              <div class="video-card">
+                <video controls>
+                  <source src="../assets/学生风采2.mp4" type="video/mp4" />
+                </video>
+                <div class="video-title">课余校内风采</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -513,9 +395,10 @@ export default {
   },
   data() {
     return {
-      activeTab: 1, // 默认选中第一个视频
+      activeTab: 1,
       isShowContent: false,
-      isLoading: false
+      isLoading: false,
+      tabs: ["听听学生真心话", "学习风采", "课余拉练风采", "课余校内风采"]
     };
   },
   watch: {
@@ -540,425 +423,325 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.tabs button {
-  flex: 1; /* 使按钮占满整个可用宽度 */
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.tabs button:hover {
-  background-color: #e0e0e0;
-  transform: scale(1.05);
-}
-
-.tabs button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #0056b3;
-}
-
-.tabs button:focus {
-  outline: none;
-}
-
-.video-container {
-  margin-bottom: 20px;
-}
-.van-loading {
-  margin-top: 50%;
-}
-/* 容器样式 */
-.robot-talent {
-  font-family: "Arial", sans-serif;
-  background-color: #f0f4f7;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 30px auto;
-  text-align: center;
-}
-
-/* 段落样式 */
-.robot-talent p {
-  font-size: 16px;
-  color: #34495e;
-  line-height: 1.6;
-}
-
-/* 强调的文本样式 */
-.highlight {
-  color: #000099;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-/* 引用的文本样式 */
-.quote {
-  color: #e67e22;
-  font-weight: 600;
-  font-style: italic;
-}
-
-/* 响应式样式：小屏设备 */
-@media screen and (max-width: 600px) {
-  .robot-talent {
+/* 合作院校页面 */
+.page-content-1 {
+  h1 {
+    text-align: center;
+    color: #1976d2;
+  }
+  .school-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
-    max-width: 100%;
   }
 
-  .robot-talent p {
-    font-size: 14px;
-  }
-
-  .highlight {
-    font-size: 14px;
-  }
-
-  .quote {
-    font-size: 14px;
-  }
-}
-
-.content {
-  padding: 0 10px;
-  margin-top: 10px;
-}
-.content p {
-  font-size: 18px;
-}
-.picText {
-  margin-bottom: 30px;
-  width: 100%;
-}
-/* 样式重置 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* 标题样式 */
-.heading {
-  font-size: 26px;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* 标签样式 */
-.label {
-  font-size: 16px;
-  color: #7f8c8d;
-  font-weight: 600;
-  width: 120px;
-  display: inline-block;
-}
-
-/* 内容样式 */
-.value {
-  font-size: 16px;
-  color: #34495e;
-  font-weight: 500;
-  flex-grow: 1;
-}
-
-.estate3 {
-  padding: 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-
-  .education-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .education-card {
+  .school-card {
     background: white;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 
     &:hover {
       transform: translateY(-5px);
     }
 
-    .card-header {
-      background: linear-gradient(90deg, #2196F3, #1976D2);
-      padding: 20px;
-      position: relative;
-
-      h2 {
-        color: white;
-        font-size: 24px;
-        font-weight: 600;
-        margin: 0;
-      }
-
-      .header-decoration {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, #FFC107, #FF9800);
-      }
-    }
-
-    .card-content {
-      padding: 20px;
-    }
-
-    .sub-section {
-      margin-bottom: 20px;
-      
-      h3 {
-        color: #1976D2;
-        font-size: 18px;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-    }
-
-    .info-row {
-      display: flex;
-      padding: 12px 0;
-      border-bottom: 1px solid #f0f0f0;
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      .info-label {
-        width: 120px;
-        color: #666;
-        font-weight: 500;
-      }
-
-      .info-value {
-        flex: 1;
-        color: #333;
-      }
-    }
-  }
-
-  .robot-talent-card {
-    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-
-    p {
-      color: #333;
-      line-height: 1.8;
-      font-size: 16px;
+    .school-name {
+      padding: 15px;
+      background: linear-gradient(90deg, #2196f3, #1976d2);
+      color: white;
+      font-weight: 600;
       text-align: center;
     }
 
-    .highlight {
-      color: #1976D2;
-      font-weight: 600;
-    }
-
-    .quote {
-      color: #FF9800;
-      font-style: italic;
+    .school-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
   }
 }
 
-@media (max-width: 768px) {
-  .estate3 {
-    padding: 10px;
+/* 公司介绍页面 */
+.page-content-2 {
+  .intro-section {
+    margin-bottom: 30px;
+  }
 
-    .education-card {
-      .card-header h2 {
-        font-size: 20px;
+  .video-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+  }
+}
+
+/* 使命愿景页面样式 */
+.page-content-4 {
+  /* 全局设置 */
+  .page-content {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+  }
+
+  .page-content-4 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 40px;
+  }
+
+  .mission-container {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .mission-header h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .header-decoration {
+    width: 80px;
+    height: 4px;
+    background-color: #ff6f61;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  /* 宫格布局 */
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .mission-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .mission-icon {
+    background-color: #ff6f61;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .mission-card h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .mission-content {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* 价值观列表 */
+  .mission-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .mission-content li {
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    color: #ff6f61;
+    font-weight: bold;
+  }
+
+  .mission-content h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .mission-content p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .mission-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+/* 校长介绍页面 */
+.page-content-6 {
+  .video-section {
+    margin: 30px 0;
+  }
+
+  .teaching-mode {
+    margin: 30px 0;
+  }
+}
+
+/* 教师风采页面 */
+.page-content-7 {
+  .teacher-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .teacher-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 学生风采页面样式 */
+.page-content-8 {
+  .student-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .student-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 32px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #2196f3, #1976d2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-decoration {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #ffc107, #ff9800);
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+  }
+
+  .tab-container {
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+
+      button {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        background: #f0f0f0;
+        color: #666;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.active {
+          background: #2196f3;
+          color: white;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .tab-content {
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
       }
 
-      .info-row {
-        flex-direction: column;
-        gap: 5px;
+      .video-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
 
-        .info-label {
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        video {
           width: 100%;
+          display: block;
+        }
+
+        .video-title {
+          padding: 15px;
+          background: #f8f9fa;
+          color: #333;
+          font-weight: 500;
+          text-align: center;
         }
       }
     }
   }
 }
 
-/* 响应式样式：小屏设备 */
-@media screen and (max-width: 600px) {
-  .education-info {
-    padding: 20px;
-    max-width: 100%;
+@media (max-width: 768px) {
+  .page-content-4,
+  .page-content-8 {
+    .education-grid,
+    .mission-grid,
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .tab-buttons {
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   }
-
-  .label {
-    font-size: 14px;
-    width: 120px;
-  }
-
-  .value {
-    font-size: 14px;
-  }
-}
-/* 样式容器 */
-.presentation-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
-  overflow: hidden;
-  font-family: "Arial", sans-serif;
-}
-
-/* 幻灯片 */
-.slide {
-  padding: 50px 0 50px 80px;
-  display: flex;
-  flex-direction: row;
-  margin: 20px 0;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-  border-radius: 12px; /* 圆角效果 */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.07); /* 大气阴影效果 */
-  transition: all 0.3s ease-in-out; /* 平滑过渡 */
-}
-
-/* 标题样式 */
-.title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #2c3e50;
-  flex: 1;
-  padding: 20px;
-  text-align: left;
-  background: linear-gradient(45deg, #3498db, #e74c3c);
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-}
-
-/* 内容区域 */
-.content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-/* 图片样式 */
-.slide-image {
-  width: 40%;
-  border-radius: 8px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-in-out;
-}
-
-/* 图片动画 */
-.slide-image:hover {
-  transform: scale(1.05);
-}
-
-/* 文本内容区域 */
-.text-content {
-  width: 50%;
-  padding: 20px;
-  font-size: 18px;
-  color: #34495e;
-}
-
-/* 价值观列表 */
-.values-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.values-list li {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 12px;
-}
-
-.values-list strong {
-  color: #e67e22;
-}
-
-/* 动画效果 */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* 响应式设计 */
-@media screen and (max-width: 768px) {
-  .presentation-container {
-    width: 100%;
-  }
-
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .slide-image {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .text-content {
-    width: 80%;
-    text-align: center;
-  }
-
-  .title {
-    font-size: 28px;
-    padding: 15px;
-  }
-}
-
-/* 视频部分样式 */
-.video-container {
-  margin: 30px 0;
-  background-color: #000; /* 给视频添加黑色背景 */
-  padding: 10px;
-  border-radius: 10px; /* 给视频容器圆角 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 视频容器阴影效果 */
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-video {
-  max-width: 100%;
-  border-radius: 8px; /* 视频边角圆滑 */
 }
 </style>
