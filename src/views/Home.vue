@@ -137,6 +137,9 @@
       <div class="estateImg"></div>
       <div class="estateImg"></div>
     </div>
+    <div class="allSchool">
+      <img src="../assets/allschool.jpg" width="100%" alt="" />
+    </div>
     <pageFooter></pageFooter>
   </div>
 </template>
@@ -556,11 +559,11 @@ export default {
     }
     .estateImg:nth-child(3) {
       width: 21%;
-      background-image: url("../assets/pic333.jpg");
+      background-image: url("../assets/pic333.jpeg");
     }
     .estateImg:nth-child(4) {
       width: 11%;
-      background-image: url("../assets/1_home/45666.jpg");
+      background-image: url("../assets/1_home/45666.png");
       background-position: 55% 0%;
     }
     .estateImg:nth-child(4):hover {
@@ -573,6 +576,14 @@ export default {
     .estateImg:nth-child(5):hover {
       width: 34%;
     }
+  }
+}
+.allSchool {
+  padding: 30px 60px;
+  background-color: #b69d74;
+  img {
+    width: 100%;
+    height: 500px;
   }
 }
 </style>
