@@ -583,7 +583,7 @@ export default {
   background-color: #b69d74;
   img {
     width: 100%;
-    height: 500px;
+    height: 650px;
   }
 }
 </style>
