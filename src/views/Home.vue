@@ -585,5 +585,9 @@ export default {
     width: 100%;
     height: 650px;
   }
+  img:hover {
+    transform: translateY(-5px); /* 鼠标悬停时元素向上移动 */
+    transition: 1s;
+  }
 }
 </style>
