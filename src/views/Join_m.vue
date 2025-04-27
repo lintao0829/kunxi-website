@@ -9,11 +9,11 @@
     />
     <div class="content">
       <div class="culture" v-if="navIndex == 0">
-        <p class="title">大稻口号：</p>
+        <p class="title">焜曦教育</p>
         <p class="text">一家人、一件事、一起干、一定赢!</p>
-        <p class="title">大稻精神：</p>
+        <p class="title">焜曦教育</p>
         <p class="text">对上以敬、对事以真、对人以诚。</p>
-        <p class="title">大稻信念：</p>
+        <p class="title">焜曦教育</p>
         <p class="text">这个世界上最快的捷径便是脚踏实地。</p>
       </div>
       <div class="flow" v-else-if="navIndex == 1">
