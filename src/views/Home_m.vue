@@ -175,6 +175,12 @@ export default {
           id: 1
         },
         {
+          title: "师资力量",
+          title_EN: "CONTACT<br>US",
+          img: require("../assets/1_home_M/shizililiang.jpeg"),
+          id: 9
+        },
+        {
           title: "培养类型",
           title_EN: "CULTRUE<br>TYPE",
           img: require("../assets/1_home_M/estate3.png"),
@@ -198,7 +204,6 @@ export default {
           img: require("../assets/1_home_M/estate5.png"),
           id: 5
         }
-        // 6---校长介绍人工智能   7---教师风采
       ]
     };
   },
