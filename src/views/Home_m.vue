@@ -187,16 +187,34 @@ export default {
           id: 3
         },
         {
-          title: "企业文化与价值观",
-          title_EN: "CORPORATE<br>CULTRUE",
-          img: require("../assets/1_home_M/estate4.png"),
-          id: 4
+          title: "学生管理体系",
+          title_EN: "STUDENT<br>MANAGEMENT",
+          img: require("../assets/1_home_M/学生管理体系.jpeg"),
+          id: 10
+        },
+        {
+          title: "工业机器人核心竞争力",
+          title_EN: "CORE<br>COMPETENCE",
+          img: require("../assets/1_home_M/核心竞争力.jpeg"),
+          id: 11
+        },
+        {
+          title: "工业机器人培养课程体系",
+          title_EN: "COURSE<br>SYSTEM",
+          img: require("../assets/1_home_M/培养课程.jpeg"),
+          id: 12
         },
         {
           title: "学生风采",
           title_EN: "CONTACT<br>US",
           img: require("../assets/pic444.jpg"),
           id: 8
+        },
+        {
+          title: "企业文化与价值观",
+          title_EN: "CORPORATE<br>CULTRUE",
+          img: require("../assets/1_home_M/estate4.png"),
+          id: 4
         },
         {
           title: "联系我们",

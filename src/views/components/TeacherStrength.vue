@@ -1,10 +1,38 @@
 <template>
   <div class="teacher-strength">
-    <h2>焜曦教育师资力量</h2>
     <div class="intro-section">
       <div class="intro-card">
+        <div class="card-title">团队概述</div>
         <div class="card-content">
-          焜曦教育在工业机器人专业的师资配备上独具匠心，构建了一支实力强劲、经验丰富的"双师型"教学团队。教师均毕业于自动化、机械工程、电气自动化等相关专业，如毕业于山东工业大学自动化专业的曹培宏，以及毕业于山东交通学院电气自动化专业的鹿保卫等。他们在工业机器人、PLC可编程控制器、电工电子技术等领域拥有扎实的理论基础。团队中不少教师拥有多年企业工作经验，曾任职于科沃斯、固高科技等知名企业，如卢彦龙担任过机器人编程与设计相关工作，刘茂山曾是固高科技研发师。教师们采用理论、仿真、实训"三位一体"教学方式，让学生先通过理论学习掌握基础知识，再借助仿真模拟熟悉操作流程，最后在实训中进行真机实操。除专业授课教师外，还有职业规划专业人士，为学生提供职业规划指导，帮助学生了解工业机器人行业的职业发展路径、岗位需求，引导学生根据自身兴趣与特长进行职业规划。
+          焜曦教育在工业机器人专业的师资配备上独具匠心，构建了一支实力强劲、经验丰富的"双师型"教学团队，为学生提供高质量教学与专业指导，确保学生能在工业机器人领域掌握前沿知识与实践技能。
+        </div>
+      </div>
+
+      <div class="intro-card">
+        <div class="card-title">专业素养</div>
+        <div class="card-content">
+          焜曦教育工业机器人专业的教师均毕业于自动化、机械工程、电气自动化等相关专业，像毕业于山东工业大学自动化专业的曹培宏，以及毕业于山东交通学院电气自动化专业的鹿保卫等。他们在工业机器人、PLC可编程控制器、电工电子技术等领域拥有扎实的理论基础，能够深入浅出地为学生讲解专业知识，帮助学生构建完善的知识体系。
+        </div>
+      </div>
+
+      <div class="intro-card">
+        <div class="card-title">企业经验</div>
+        <div class="card-content">
+          团队中不少教师拥有多年企业工作经验，曾任职于行业知名企业，如科沃斯、固高科技等。例如，卢彦龙担任过机器人编程与设计相关工作，刘茂山曾是固高科技研发师。他们将在企业积累的实战经验融入教学，把工业机器人在实际生产中的应用案例、常见问题及解决方法传授给学生，让学生了解行业实际需求与发展动态，提升实践能力与解决问题的能力。
+        </div>
+      </div>
+
+      <div class="intro-card highlight">
+        <div class="card-title">教学特色</div>
+        <div class="card-content">
+          教师们在工业机器人教学领域深耕多年，教学经验丰富，熟悉教学规律与学生学习特点，能根据学生实际情况因材施教。采用理论、仿真、实训"三位一体"教学方式，让学生先通过理论学习掌握基础知识，再借助仿真模拟熟悉操作流程，最后在实训中进行真机实操，真正掌握专业技能。在PLC实训课程中，老师会先讲解理论知识，再通过仿真软件让学生模拟操作，最后安排实际项目让学生动手实践。
+        </div>
+      </div>
+
+      <div class="intro-card">
+        <div class="card-title">多元发展</div>
+        <div class="card-content">
+          除专业授课教师外，还有职业规划专业人士，为学生提供职业规划指导。他们帮助学生了解工业机器人行业的职业发展路径、岗位需求，引导学生根据自身兴趣与特长进行职业规划，让学生在学习专业知识的同时明确职业方向，为未来就业做好充分准备。
         </div>
       </div>
     </div>
@@ -93,41 +121,15 @@ export default {
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
   min-height: 100vh;
 
-  h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #1890ff;
-    position: relative;
-    padding-bottom: 15px;
-    font-weight: 600;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #1890ff, #36cfc9);
-      border-radius: 3px;
-      transition: width 0.3s ease;
-    }
-
-    &:hover::after {
-      width: 100px;
-    }
-  }
-
   .intro-section {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     padding: 20px;
 
     .intro-card {
       background: #fff;
       border-radius: 12px;
-      padding: 20px;
+      padding: 24px;
       margin-bottom: 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease;
@@ -138,12 +140,43 @@ export default {
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       }
 
+      .card-title {
+        color: #1890ff;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 4px;
+          height: 16px;
+          background: #1890ff;
+          margin-right: 8px;
+          border-radius: 2px;
+        }
+      }
+
       .card-content {
         color: #666;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.8;
         text-align: justify;
-        letter-spacing: 0.5px;
+      }
+
+      &.highlight {
+        background: linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%);
+        border-left-color: #36cfc9;
+        
+        .card-title {
+          color: #36cfc9;
+          
+          &::before {
+            background: #36cfc9;
+          }
+        }
       }
     }
   }
@@ -156,7 +189,6 @@ export default {
   }
 
   .teacher-card {
-    padding-top: 10px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -170,7 +202,7 @@ export default {
 
     .teacher-image {
       width: 100%;
-      height: 360px;
+    //   height: 360px;
       overflow: hidden;
 
       img {
@@ -198,7 +230,7 @@ export default {
         padding-bottom: 12px;
 
         &:after {
-          content: "";
+          content: '';
           position: absolute;
           bottom: 0;
           left: 50%;
@@ -257,6 +289,22 @@ export default {
   .teacher-strength {
     padding: 15px;
 
+    .intro-section {
+      padding: 15px;
+
+      .intro-card {
+        padding: 20px;
+
+        .card-title {
+          font-size: 16px;
+        }
+
+        .card-content {
+          font-size: 14px;
+        }
+      }
+    }
+
     .teacher-grid {
       grid-template-columns: 1fr;
       gap: 20px;
@@ -264,6 +312,10 @@ export default {
     }
 
     .teacher-card {
+    //   .teacher-image {
+    //     height: 300px;
+    //   }
+
       .teacher-info {
         padding: 16px;
 

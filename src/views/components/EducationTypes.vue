@@ -1,6 +1,12 @@
 <template>
   <div class="page-content page-content-3">
-    <div class="education-container">
+    <img
+      width="100%"
+      src="../../assets/1_home_M/peiyangleixing.jpg"
+      alt=""
+      style="margin-top: -10px;"
+    />
+    <!-- <div class="education-container">
       <div class="education-card">
         <div class="card-header">
           <i class="iconfont icon-robot"></i>
@@ -66,18 +72,30 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'EducationTypes'
-}
+  name: "EducationTypes"
+};
 </script>
 
 <style lang="scss" scoped>
 .page-content-3 {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .education-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -150,4 +168,4 @@ export default {
     }
   }
 }
-</style> 
+</style>

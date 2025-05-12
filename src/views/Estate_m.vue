@@ -24,7 +24,7 @@
     <CompanyIntro v-if="$route.query.id == 2 && isShowContent" />
     <!-- 教育类型 -->
     <EducationTypes v-if="$route.query.id == 3 && isShowContent" />
-    <!-- 使命与愿景 -->
+    <!-- 使命与愿景-文化与价值观 -->
     <MissionVision v-if="$route.query.id == 4 && isShowContent" />
     <!-- 联系我们 -->
     <contactUs v-if="$route.query.id == 5 && isShowContent" />
@@ -36,6 +36,12 @@
     <StudentShowcase v-if="$route.query.id == 8 && isShowContent" />
     <!-- 师资力量 -->
     <TeacherStrength v-if="$route.query.id == 9 && isShowContent" />
+    <!-- 学生管理体系 -->
+    <StudentManagement v-if="$route.query.id == 10 && isShowContent" />
+    <!-- 工业机器人核心竞争力 -->
+    <CoreCompetence v-if="$route.query.id == 11 && isShowContent" />
+    <!-- 工业机器人培养课程体系 -->
+    <CourseSystem v-if="$route.query.id == 12 && isShowContent" />
   </div>
 </template>
 
@@ -49,6 +55,9 @@ import PrincipalIntro from "./components/PrincipalIntro.vue";
 import TeacherGallery from "./components/TeacherGallery.vue";
 import StudentShowcase from "./components/StudentShowcase.vue";
 import TeacherStrength from "./components/TeacherStrength.vue";
+import StudentManagement from "./components/StudentManagement.vue";
+import CoreCompetence from "./components/CoreCompetence.vue";
+import CourseSystem from "./components/CourseSystem.vue";
 
 export default {
   name: "estate_m",
@@ -61,7 +70,10 @@ export default {
     PrincipalIntro,
     TeacherGallery,
     StudentShowcase,
-    TeacherStrength
+    TeacherStrength,
+    StudentManagement,
+    CoreCompetence,
+    CourseSystem
   },
   data() {
     return {
