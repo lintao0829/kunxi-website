@@ -15,7 +15,7 @@
         @click="openNavLists"
         alt=""
       />
-      <span style="color:#000099;font-size: 14px;font-weight: 800;"
+      <span style="color:#000099;font-size: 18px;font-weight: 800;"
         >焜曦教育</span
       >
       <img src="@/assets/0_common/kunxiLogo.png" alt="" />

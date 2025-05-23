@@ -42,6 +42,8 @@
     <CoreCompetence v-if="$route.query.id == 11 && isShowContent" />
     <!-- 工业机器人培养课程体系 -->
     <CourseSystem v-if="$route.query.id == 12 && isShowContent" />
+    <!-- 央视栏目 -->
+    <CCTVInterview v-if="$route.query.id == 13 && isShowContent" />
   </div>
 </template>
 
@@ -58,6 +60,7 @@ import TeacherStrength from "./components/TeacherStrength.vue";
 import StudentManagement from "./components/StudentManagement.vue";
 import CoreCompetence from "./components/CoreCompetence.vue";
 import CourseSystem from "./components/CourseSystem.vue";
+import CCTVInterview from "./components/CCTVInterview.vue";
 
 export default {
   name: "estate_m",
@@ -73,7 +76,8 @@ export default {
     TeacherStrength,
     StudentManagement,
     CoreCompetence,
-    CourseSystem
+    CourseSystem,
+    CCTVInterview
   },
   data() {
     return {
@@ -134,31 +138,46 @@ export default {
       display: inline-block;
       animation: fadeInOut 1.4s infinite ease-in-out both;
 
-      &:nth-child(1) { animation-delay: 0s; }
-      &:nth-child(2) { animation-delay: 0.2s; }
-      &:nth-child(3) { animation-delay: 0.4s; }
-      &:nth-child(4) { animation-delay: 0.6s; }
-      &:nth-child(5) { animation-delay: 0.8s; }
-      &:nth-child(6) { animation-delay: 1s; }
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+      &:nth-child(6) {
+        animation-delay: 1s;
+      }
     }
   }
 }
 
 @keyframes bounce {
-  0%, 80%, 100% { 
+  0%,
+  80%,
+  100% {
     transform: scale(0);
-  } 
-  40% { 
-    transform: scale(1.0);
+  }
+  40% {
+    transform: scale(1);
   }
 }
 
 @keyframes fadeInOut {
-  0%, 100% { 
+  0%,
+  100% {
     opacity: 0.2;
     transform: translateY(0);
   }
-  50% { 
+  50% {
     opacity: 1;
     transform: translateY(-5px);
   }

@@ -169,6 +169,12 @@ export default {
           id: 2
         },
         {
+          title: "央视采访",
+          title_EN: "CCTV<br>INTERVIEW",
+          img: require("../assets/1_home_M/cctv5.jpg"),
+          id: 13
+        },
+        {
           title: "合作院校",
           title_EN: "PARTNER<br>INSTITUTION",
           img: require("../assets/1_home_M/estate1.png"),
