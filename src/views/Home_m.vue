@@ -90,6 +90,23 @@
           <p class="text" v-html="item.text"></p>
         </div>
       </div>
+      <!-- 新增视频和文案部分 -->
+      <div class="video-section">
+        <video controls class="video-element">
+          <source src="@/assets/30_1748851608.mp4" type="video/mp4" />
+        </video>
+        <div class="video-copywriting">
+          <p>
+            <span class="highlight-cctv">【央视权威聚焦】</span>2025年5月15日，焜曦教育创始人芦院长受邀央视《对话》栏目，与著名主持人朱迅展开工业机器人人才培养深度对话。专访中，芦院长以二十年行业积淀系统阐述产业趋势，从技术革新到人才标准制定，为行业发展提供战略级见解，彰显我院在专业领域的标杆地位。
+          </p>
+          <p>
+            作为国内工业机器人教育的开拓者，焜曦教育始终践行"产教融合"理念。芦院长带领团队攻克智能示教系统、虚实结合实训平台等12项行业技术难题，培养的8000余名高技能人才遍布汽车制造、精密电子等国家重点领域。此次央视专访既是对我院"理论-实训-就业"一体化培养模式的肯定，更是对中国智造人才孵化成果的集中展示。
+          </p>
+          <p>
+            站在新起点，我院将持续深化与ABB、发那科等全球机器人巨头的战略合作，投资1.2亿元建设新一代智能制造实训基地。未来三年计划培养认证机器人工程师15000名，打造从课程研发到人才输出的完整生态链，为中国工业4.0转型提供强有力的人才支撑！
+          </p>
+        </div>
+      </div>
       <!-- <div class="video-card">
         <video controls>
           <source src="../assets/yangqi.mp4" type="video/mp4" />
@@ -136,12 +153,12 @@ export default {
         observeParents: true //修改swiper的父元素时，自动初始化swiper
       },
       swiperImg: [
-        { img: require("../assets/pic333.jpg") },
-        { img: require("../assets/pic222.jpg") },
-        { img: require("../assets/pic111.jpg") },
+        { img: require("../assets/1_home_M/cctvpic.jpg") },
+        { img: require("../assets/1_home_M/cctvLogo.jpg") },
+        { img: require("../assets/pic999.jpg") },
         { img: require("../assets/pic555.jpg") },
         { img: require("../assets/pic666.jpg") },
-        { img: require("../assets/pic999.jpg") }
+        { img: require("../assets/pic111.jpg") }
       ],
       intro: [
         {
@@ -245,6 +262,9 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  background-color: #fff;
+}
 /* 轮播 */
 .swiperVideo {
   width: 100%;
@@ -260,7 +280,7 @@ export default {
 }
 .swiperImg {
   width: 100%;
-  height: 800px;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -291,7 +311,7 @@ export default {
 /* 关于 */
 .about {
   width: 100%;
-  padding: 30px 0;
+  padding: 30px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,12 +342,45 @@ export default {
   line-height: 40px;
   opacity: 0.8;
 }
+
+.video-section {
+  width: 90%;
+  margin: 30px auto 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-element {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.video-copywriting {
+  width: 100%;
+  max-width: 800px;
+  text-align: justify;
+  line-height: 1.8;
+  color: #333;
+}
+
+.video-copywriting p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
 /* 介绍 */
 .intro {
   width: 100%;
   height: 235px;
   background: #f7f7f7;
-
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -371,7 +424,7 @@ export default {
   padding: 38px 0 38px;
 }
 .estate .estateBox {
-  width: 80%;
+  width: 96%;
   height: 230px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -406,7 +459,7 @@ export default {
 }
 .advantages-container {
   margin: 0 auto;
-  margin: 30px 10px;
+  margin: 30px 10px 0;
   background: #f8f9fa;
   border-radius: 12px;
   width: 100%;
@@ -421,8 +474,8 @@ export default {
   transition: transform 0.3s;
 }
 
-.advantage-item:hover {
-  transform: translateX(10px);
+.advantage-item:last-child {
+  margin-bottom: 0;
 }
 
 .advantage-title {
@@ -450,5 +503,10 @@ export default {
 }
 .video-card {
   height: 400px;
+}
+.highlight-cctv {
+  color: #ff0000; /* 红色突出显示，可根据需求调整颜色 */
+  font-weight: bold; /* 加粗字体 */
+  font-size: 1.2em; /* 字体放大，可根据需求调整大小 */
 }
 </style>

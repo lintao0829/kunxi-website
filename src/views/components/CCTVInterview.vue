@@ -94,17 +94,19 @@
 
 <style scoped lang="scss">
 /* 基础变量 */
-$primary-color: #000099;
-$secondary-color: #b48942;
+$primary-color: #1890ff;
+$secondary-color: #096dd9;
 $text-color: #333;
-$light-bg: #f8f8f8;
-$border-radius: 8px;
-$spacing-unit: 16px;
+$light-bg: #f5f7fa;
+$border-radius: 12px;
+$spacing-unit: 20px;
 
 .cctv-interview {
   padding: $spacing-unit;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  min-height: 100vh;
 }
 
 /* 图片画廊 */
@@ -116,14 +118,14 @@ $spacing-unit: 16px;
   
   .gallery-item {
     width: 100%;
-    height: 180px;
+    height: 220px;
     border-radius: $border-radius;
     object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     
     &:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
   }
 }
@@ -131,10 +133,15 @@ $spacing-unit: 16px;
 /* 标题样式 */
 .section-title {
   color: $primary-color;
-  font-size: 20px;
+  font-size: 24px;
   margin: $spacing-unit 0;
   text-align: center;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 /* 内容卡片通用样式 */
@@ -143,13 +150,19 @@ $spacing-unit: 16px;
   margin: $spacing-unit 0;
   background: white;
   border-radius: $border-radius;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-left: 4px solid $primary-color;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
 
 .highlight-text {
   color: $text-color;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: $spacing-unit;
   text-align: center;
 }
@@ -159,11 +172,12 @@ $spacing-unit: 16px;
   @extend .content-card;
   
   h4 {
-    color: $secondary-color;
-    font-size: 16px;
+    color: $primary-color;
+    font-size: 18px;
     margin-bottom: $spacing-unit/2;
     display: flex;
     align-items: center;
+    font-weight: 600;
 
     .icon {
       margin-right: 8px;
@@ -172,8 +186,9 @@ $spacing-unit: 16px;
 
   p {
     color: #666;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
   }
 }
 
@@ -182,23 +197,25 @@ $spacing-unit: 16px;
   @extend .content-card;
   
   .highlight-date {
-    color: $secondary-color;
+    color: $primary-color;
     font-weight: 600;
     margin: $spacing-unit 0;
     text-align: center;
+    font-size: 18px;
   }
 
   p {
     color: $text-color;
     margin-bottom: $spacing-unit;
-    line-height: 1.6;
+    line-height: 1.8;
+    text-align: justify;
   }
 }
 
 /* 引用样式 */
 .emphasis-quote {
   @extend .content-card;
-  border-left: 4px solid $secondary-color;
+  border-left: 4px solid $primary-color;
   background: $light-bg;
   margin: $spacing-unit 0;
   
@@ -211,10 +228,9 @@ $spacing-unit: 16px;
 /* 座谈会部分 */
 .symposium-section {
   @extend .content-card;
-  border: 1px solid rgba($primary-color, 0.1);
   
   .gold-text {
-    color: $secondary-color;
+    color: $primary-color;
     font-weight: 600;
   }
 }
@@ -225,13 +241,14 @@ $spacing-unit: 16px;
   
   h4 {
     color: $primary-color;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: $spacing-unit/2;
     display: flex;
     align-items: center;
+    font-weight: 600;
 
     .icon {
-      color: $secondary-color;
+      color: $primary-color;
       margin-right: 8px;
     }
   }
@@ -241,16 +258,17 @@ $spacing-unit: 16px;
   padding-left: $spacing-unit;
   
   li {
-    color: #555;
-    font-size: 14px;
+    color: #666;
+    font-size: 15px;
     line-height: 1.8;
-    margin: 8px 0;
+    margin: 12px 0;
     position: relative;
 
     &::before {
       content: "•";
       color: $primary-color;
       margin-right: 8px;
+      font-weight: bold;
     }
   }
 }
@@ -258,9 +276,9 @@ $spacing-unit: 16px;
 /* 愿景文本 */
 .vision-text {
   color: $primary-color;
-  font-weight: 500;
+  font-weight: 600;
   padding: $spacing-unit;
-  background: rgba($primary-color, 0.05);
+  background: rgba($primary-color, 0.08);
   border-radius: $border-radius;
   text-align: center;
   margin: $spacing-unit 0;
@@ -269,13 +287,52 @@ $spacing-unit: 16px;
 /* 结论部分 */
 .conclusion {
   @extend .content-card;
-  background: rgba($primary-color, 0.05);
+  background: rgba($primary-color, 0.08);
   text-align: center;
   
   p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cctv-interview {
+    padding: 15px;
+
+    .media-gallery {
+      gap: 15px;
+      margin-bottom: 20px;
+
+      .gallery-item {
+        height: 160px;
+      }
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    .content-card {
+      padding: 20px;
+      margin: 15px 0;
+    }
+
+    .detail-item,
+    .dean-interview,
+    .emphasis-quote,
+    .symposium-section,
+    .conclusion {
+      h4, .highlight-date {
+        font-size: 16px;
+      }
+
+      p, li {
+        font-size: 14px;
+      }
+    }
   }
 }
 </style>
