@@ -11,16 +11,8 @@
     >
       <div class="navSelect">
         <div class="navSelectBox">
-          <img
-            class="icon_home"
-            src="../assets/0_common/icon_home.png"
-            alt=""
-          />
-          <img
-            class="icon_arrow"
-            src="../assets/0_common/icon_arrow.png"
-            alt=""
-          />
+          <img class="icon_home" src="../assets/0_common/icon_home.png" alt="" />
+          <img class="icon_arrow" src="../assets/0_common/icon_arrow.png" alt="" />
           <p>{{ item.name }}</p>
           <img
             v-if="item.listName.length > 0"
@@ -28,7 +20,6 @@
             src="../assets/0_common/icon_arrow.png"
             alt=""
           />
-          <!-- selectName若有值先显示selectName，若无数据选择默认显示第一个nav -->
           <p v-if="item.listName">{{ selectName || item.listName[0] }}</p>
         </div>
       </div>
@@ -54,44 +45,11 @@ export default {
   data() {
     return {
       selectName: "",
-      selectItem: 0, //选中的nav 默认为第一个
-      pageNav: [
-        // {
-        //   index: 2,
-        //   name: "走进大稻",
-        //   listName: ["企业介绍", "企业架构", "企业愿景"]
-        // },
-        // {
-        //   index: 3,
-        //   name: "大稻产业nav-mobile",
-        //   listName: ["大稻地产", "大稻建设", "产业投资", "大健康", "文化艺术"]
-        // },
-        // {
-        //   index: 4,
-        //   name: "合作伙伴",
-        //   listName: ["设计单位", "平台资源"]
-        // },
-        // {
-        //   index: 5,
-        //   name: "新闻动态",
-        //   listName: []
-        // },
-        // {
-        //   index: 6,
-        //   name: "加入大稻",
-        //   listName: ["组织文化", "人才招聘"]
-        // },
-        // {
-        //   index: 7,
-        //   name: "联络大稻",
-        //   listName: []
-        // }
-      ]
+      selectItem: 0,
+      pageNav: []
     };
   },
   props: ["navIndex", "sendSelect"],
-  components: {},
-  mounted() {},
   created() {
     if (this.sendSelect) {
       this.selectItem = this.sendSelect;
@@ -121,8 +79,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    // 导航栏文字不可选中
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -139,12 +95,10 @@ export default {
         width: 250px;
         display: flex;
         align-items: center;
-        // justify-content: center;
         img {
           display: block;
         }
-        img,
-        p {
+        img, p {
           margin-right: 16px;
         }
         img.icon_home {

@@ -8,24 +8,12 @@
         :not-next-tick="notNextTick"
         ref="mySwiper"
       >
-        <!-- <swiper-slide>
-          <div class="swiper_video">
-            <video autoplay loop muted>
-              <source
-                src="../assets/1_home/Timelapse_Crown.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </swiper-slide> -->
         <swiper-slide v-for="(item, index) in swiperImg" :key="index">
           <div
             class="swiper_img"
             :style="{ backgroundImage: 'url(' + item.img + ')' }"
           ></div>
         </swiper-slide>
-        <!-- Optional controls -->
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
@@ -36,7 +24,6 @@
       <div class="splitline"></div>
       <div class="infoBox">
         <div class="profile">
-          <!-- <img src="../assets/0_common/kunxiLogo.png" alt="" /> -->
           <span class="title">焜曦教育</span>
           <p>
             焜曦教育集团自2012年起，十几年来，一直专注于工业机器人技术人才的培养，通过深入有效的校企合作，打通产业链、创新链、教育链、人才链，在济南、青岛、淄博、德州、威海、泰安、济宁、烟台、潍坊、石家庄、西安等地设立培训基地.
@@ -45,7 +32,6 @@
         <div class="splitline_y"></div>
         <div class="headline">
           <p class="title">主营业务</p>
-          <p class="time"></p>
           <p class="content">
             ·工业机器人的研发、设计、安装调试、维修和维护<br />
             ·人才培养——学历教育、技能提升<br />
@@ -126,11 +112,6 @@
       </div>
     </div>
     <div class="estate">
-      <!-- @click="goEstate(0)
-@click="goEstate(1)
-@click="goEstate
-@click="goEstate
-@click="goEstate -->
       <div class="estateImg"></div>
       <div class="estateImg"></div>
       <div class="estateImg"></div>
@@ -155,19 +136,15 @@ export default {
         autoplay: 7000,
         speed: 3000,
         loop: true,
-        grabCursor: true, //鼠标触及变成手掌形状
+        grabCursor: true,
         setWrapperSize: true,
         autoHeight: true,
         pagination: ".swiper-pagination",
         paginationClickable: true,
         prevButton: ".swiper-button-prev",
         nextButton: ".swiper-button-next",
-        // mousewheelControl: true,//鼠标滚轮控制轮播
-        bserver: true, //修改swiper自己或子元素时，自动初始化swiper
-        observeParents: true //修改swiper的父元素时，自动初始化swiper
-        // onTransitionStart(swiper) {
-        //   console.log(swiper);
-        // },
+        observe: true,
+        observeParents: true
       },
       swiperImg: [
         { img: require("../assets/pic333.jpg") },
@@ -181,8 +158,7 @@ export default {
         {
           img: require("../assets/1_home/intro1.png"),
           title: "企业定位",
-          text:
-            "以卓越的教育质量和创新的教育模式，培养出技能型、高水平的优秀人才。"
+          text: "以卓越的教育质量和创新的教育模式，培养出技能型、高水平的优秀人才。"
         },
         {
           img: require("../assets/1_home/intro2.png"),
@@ -195,61 +171,13 @@ export default {
           text: "育人至上、专业精进、诚信协作"
         }
       ],
-      news: [
-        // {
-        //   time: "2020.07.30",
-        //   title: "浙商全国500强研讨会圆满举办",
-        // },
-        // {
-        //   time: "2020.07.30",
-        //   title: "诚稻 中南签约仪式",
-        // },
-        // {
-        //   time: "2020.07.30",
-        //   title: "望朝开工典礼隆重举行",
-        // },
-        // {
-        //   time: "2020.07.30",
-        //   title: "大稻启运携手透明售房网",
-        // },
-      ],
-      tendency: [
-        // {
-        //   time: "2018.11.25",
-        //   title: "望朝开工典礼隆重举行",
-        // },
-        // {
-        //   time: "2018.11.07",
-        //   title: "望朝开工典礼隆重举行",
-        // },
-        // {
-        //   time: "2020.07.30",
-        //   title: "望朝开工典礼隆重举行",
-        // },
-        // {
-        //   time: "2020.07.30",
-        //   title: "大稻启运携手透明售房网",
-        // },
-      ],
-      headline: {},
-      news_type: -1 //新闻类型，0为集团新闻，1为板块动态，-1为未切换过类型
+      news: [],
+      tendency: [],
+      news_type: -1
     };
   },
   props: ["isScroll"],
-  components: {},
-  computed: {
-    swiper() {
-      return this.$refs.mySwiper.swiper;
-    }
-  },
-  mounted() {
-    // you can use current swiper instance object to do something(swiper methods)
-    // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
-    // console.log("this is current swiper instance object", this.swiper);
-    // this.swiper.slideTo(1, 1000, false);
-  },
   methods: {
-    // 前往新闻页
     goNews(item) {
       var pageitem = {
         name: "News",
@@ -259,20 +187,8 @@ export default {
       };
       this.$refs.borrow.goPage_News(pageitem);
     },
-    // 文章类型选择
     typeChose(index) {
       this.news_type = index;
-      this.getNews();
-    },
-    // 跳转至产业页
-    goEstate(selectIndex) {
-      var pageitem = {
-        name: "Estate",
-        url: "/estate",
-        index: 3,
-        selectIndex
-      };
-      this.$refs.borrow.goPage_Estate(pageitem);
     }
   }
 };
@@ -283,23 +199,6 @@ export default {
   width: 100%;
   .swiperBox {
     margin-top: 100px;
-    // 轮播内容
-    .swiper_video {
-      width: 100%;
-      height: 790px;
-      video {
-        min-width: 100%;
-        min-height: 100%;
-        height: auto;
-        width: auto;
-        source {
-          min-width: 100%;
-          min-height: 100%;
-          height: auto;
-          width: auto;
-        }
-      }
-    }
     .swiper_img {
       width: 100%;
       height: 790px;
@@ -307,7 +206,6 @@ export default {
       background-repeat: no-repeat;
       background-size: cover;
     }
-    // 左右箭头
     .swiper-button-prev,
     .swiper-container-rtl .swiper-button-next {
       background-image: url("../assets/0_common/slider_L.png");
@@ -318,7 +216,6 @@ export default {
       background-image: url("../assets/0_common/slider_R.png");
       right: 120px;
     }
-    // 轮播分页器
     .swiper-pagination-fraction,
     .swiper-pagination-custom,
     .swiper-container-horizontal > .swiper-pagination-bullets {
@@ -331,14 +228,12 @@ export default {
       height: 16px;
       border: 2px solid #ffffff;
       border-radius: 50%;
-      // background: rgba($color: #000000, $alpha: 0.2);
       margin: 0 6px;
     }
     ::v-deep .swiper-pagination-bullet-active {
       background-color: #ffffff;
       width: 50px;
       height: 16px;
-      background: #ffffff;
       border-radius: 8px;
     }
   }
@@ -350,16 +245,12 @@ export default {
     .infoBox {
       height: 230px;
       padding-top: 53px;
-
       background-image: url(../assets/1_home/info_back.png);
       background-position: center;
       background-repeat: repeat;
       background-size: 113%;
-
       display: flex;
-      // align-items: center;
       justify-content: center;
-
       .splitline_y {
         width: 4px;
         height: 163px;
@@ -367,12 +258,6 @@ export default {
         margin: 0 28px;
       }
       .profile {
-        img {
-          width: 150px;
-          height: 150px;
-          display: block;
-          margin-bottom: 17px;
-        }
         width: 419px;
         font-size: 16px;
         font-family: PingFang SC;
@@ -380,7 +265,6 @@ export default {
         color: #666666;
         line-height: 31px;
       }
-
       .headline {
         cursor: pointer;
         .title {
@@ -393,14 +277,6 @@ export default {
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
-        }
-        .time {
-          font-size: 18px;
-          font-family: Roboto;
-          font-weight: 500;
-          color: #666666;
-          margin: 10px 0 20px;
-          opacity: 0.6;
         }
         .content {
           width: 381px;
@@ -477,20 +353,12 @@ export default {
             transform: translateY(0);
           }
           @keyframes scrollMove_up {
-            0% {
-              transform: translateY(0);
-            }
-            100% {
-              transform: translateY(-125px);
-            }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-125px); }
           }
           @keyframes scrollMove_down {
-            0% {
-              transform: translateY(-125px);
-            }
-            100% {
-              transform: translateY(0);
-            }
+            0% { transform: translateY(-125px); }
+            100% { transform: translateY(0); }
           }
         }
       }
@@ -586,7 +454,7 @@ export default {
     height: 650px;
   }
   img:hover {
-    transform: translateY(-5px); /* 鼠标悬停时元素向上移动 */
+    transform: translateY(-5px);
     transition: 1s;
   }
 }

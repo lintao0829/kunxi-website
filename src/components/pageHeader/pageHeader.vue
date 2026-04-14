@@ -9,17 +9,15 @@
       <img
         v-if="page_now == 1 && isScroll == false"
         src="@/assets/0_common/kunxiLogo.png"
-        alt="1111"
+        alt="logo"
       />
       <img
         v-else
         src="@/assets/0_common/kunxiLogo.png"
         @click="goPage('Home', '/', '1')"
-        alt="2222"
+        alt="logo"
       />
-      <span style="color:#000099;font-size: 18px;font-weight: 800;"
-        >焜曦教育</span
-      >
+      <span style="color:#000099;font-size: 18px;font-weight: 800;">焜曦教育</span>
       <div class="navlist">
         <div
           class="nav"
@@ -39,67 +37,22 @@
 </template>
 
 <script>
+import { navListPC } from "@/config/navConfig";
+
 export default {
   name: "pageHeader",
   data() {
     return {
-      navlist: [
-        {
-          title: "首页",
-          name: "Home",
-          url: "/",
-          index: 1
-        },
-        // {
-        //   title: "走进焜曦",
-        //   name: "About",
-        //   url: "/about",
-        //   index: 2
-        // },
-        // {
-        //   title: "大稻产业pc",
-        //   name: "Estate",
-        //   url: "/estate",
-        //   index: 3
-        // },
-        // {
-        //   title: "合作伙伴",
-        //   name: "Partner",
-        //   url: "/partner",
-        //   index: 4
-        // },
-        // {
-        //   title: "新闻动态",
-        //   name: "News",
-        //   url: "/news",
-        //   index: 5
-        // },
-        // {
-        //   title: "加入大稻",
-        //   name: "Join",
-        //   url: "/join",
-        //   index: 6
-        // },
-        {
-          title: "联络焜曦",
-          name: "Contact",
-          url: "/contact",
-          index: 7
-        }
-      ],
-      page_now: 1 //当前页面，默认为1首页
+      navlist: navListPC,
+      page_now: 1
     };
   },
   props: ["isScroll"],
-  components: {},
-  created() {},
   mounted() {
-    var path_arr = window.location.href.split("/");
-    var path_length = path_arr.length;
-    var path = "/" + path_arr[path_length - 1];
-    for (var i of this.navlist) {
-      if (i.url == path) {
-        this.page_now = i.index;
+    const path = "/" + window.location.href.split("/").pop();
+    for (const item of this.navlist) {
+      if (item.url === path) {
+        this.page_now = item.index;
         return;
       }
     }
@@ -107,28 +60,15 @@ export default {
   methods: {
     goPage(name, url, index) {
       this.page_now = index;
-      this.$router.push({
-        name: name,
-        params: {
-          navIndex: index
-        }
-      });
+      this.$router.push({ name, params: { navIndex: index } });
     },
     goPage_News(item) {
-      this.$router.push({
-        name: item.name,
-        params: {
-          newsDetail: item.item
-        }
-      });
+      this.$router.push({ name: item.name, params: { newsDetail: item.item } });
     },
     goPage_Estate(item) {
       this.$router.push({
         name: item.name,
-        params: {
-          navIndex: item.index,
-          selectIndex: item.selectIndex
-        }
+        params: { navIndex: item.index, selectIndex: item.selectIndex }
       });
     }
   }
@@ -140,12 +80,10 @@ header {
   width: 100%;
   height: 100px;
   background: #ffffff;
-
   position: fixed;
   left: 0;
   top: 0;
   z-index: 999;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -170,15 +108,12 @@ header {
       align-items: center;
       justify-content: center;
       cursor: pointer;
-
       text-decoration: none;
       font-size: 18px;
       font-family: Microsoft YaHei;
       font-weight: bold;
       color: #616161;
       margin: 0 20px;
-
-      // 导航栏文字不可选中
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -216,12 +151,7 @@ header {
       color: #ffffff;
 
       .dash {
-        width: 100%;
-        height: 5px;
         background: #ffffff;
-        position: absolute;
-        top: 0;
-        left: 0;
       }
     }
   }
