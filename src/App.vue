@@ -1,50 +1,59 @@
 <template>
   <div id="app">
-    <router-view />
+    <div v-if="isLoading" class="loading">
+      <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <p>加载中...</p>
+      </div>
+    </div>
+    <router-view v-show="!isLoading" />
   </div>
 </template>
 <script>
 export default {
   name: "app",
   data() {
-    return {};
+    return {
+      isLoading: true
+    };
   },
   props: {},
   components: {},
   created() {
-    console.log(document.documentElement.scrollTop,document.body.scrollTop,window.pageYOffset)
+    this.handleRouteChange();
   },
   mounted() {
-    if (this._isMobile()) {
-      // alert("手机端");
-      this.$router.replace("/home_m");
-    } else {
-      // alert("pc端");
-      this.$router.replace("/");
-    }
-    // window.addEventListener("load", () => {
-    //   for(var i of this.navlist){
-    //     if(i.url == this.$route.path){
-    //       this.page_now = i.index
-    //     }
-    //   }
-    //   // 刷新后返回官网首页
-    //   // if (this.$route.path !== "/") {
-    //   //   // /print 表示首页
-    //   //   this.$router.replace("/"); // 切换到首页
-    //   // }
-    // });
+    this.detectDeviceAndNavigate();
+    this.$router.afterEach(() => {
+      this.isLoading = false;
+      window.scrollTo(0, 0);
+    });
   },
-
+  beforeRouteUpdate(to, from, next) {
+    this.isLoading = true;
+    next();
+  },
   methods: {
-    // 判断是否用通信设备打开网页
+    detectDeviceAndNavigate() {
+      if (this._isMobile()) {
+        this.$router.replace("/home_m");
+      } else {
+        this.$router.replace("/");
+      }
+    },
     _isMobile() {
       let flag = navigator.userAgent.match(
         /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
       );
       return flag;
     },
-  },
+    handleRouteChange() {
+      this.$router.beforeEach((to, from, next) => {
+        this.isLoading = true;
+        next();
+      });
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -56,5 +65,37 @@ export default {
   min-height: 100vh;
   overflow-y: auto;
   position: relative;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.loading-content {
+  text-align: center;
+}
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #b69d74;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-content p {
+  color: #666;
+  font-size: 14px;
 }
 </style>

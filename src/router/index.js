@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(Router);
 
@@ -9,12 +8,7 @@ export default new Router({
     {
       path: "/",
       name: "Home",
-      component: Home
-    },
-    {
-      path: "/robot",
-      name: "robot",
-      component: () => import("../views/robot.vue")
+      component: () => import("../views/Home.vue")
     },
     {
       path: "/home_m",
@@ -22,10 +16,14 @@ export default new Router({
       component: () => import("../views/Home_m.vue")
     },
     {
+      path: "/robot",
+      name: "robot",
+      component: () => import("../views/robot.vue")
+    },
+    {
       path: "/about",
       name: "About",
-      component: () =>
-        import(/* webpackChunkName: "about" */ "../views/About.vue")
+      component: () => import("../views/About.vue")
     },
     {
       path: "/about_m",
@@ -35,8 +33,7 @@ export default new Router({
     {
       path: "/estate",
       name: "Estate",
-      component: () =>
-        import(/* webpackChunkName: "estate" */ "../views/Estate.vue")
+      component: () => import("../views/Estate.vue")
     },
     {
       path: "/estate_m",
@@ -46,8 +43,7 @@ export default new Router({
     {
       path: "/partner",
       name: "Partner",
-      component: () =>
-        import(/* webpackChunkName: "partner" */ "../views/Partner.vue")
+      component: () => import("../views/Partner.vue")
     },
     {
       path: "/partner_m",
@@ -57,8 +53,7 @@ export default new Router({
     {
       path: "/news",
       name: "News",
-      component: () =>
-        import(/* webpackChunkName: "news" */ "../views/News.vue")
+      component: () => import("../views/News.vue")
     },
     {
       path: "/news_m",
@@ -68,8 +63,7 @@ export default new Router({
     {
       path: "/join",
       name: "Join",
-      component: () =>
-        import(/* webpackChunkName: "join" */ "../views/Join.vue")
+      component: () => import("../views/Join.vue")
     },
     {
       path: "/join_m",
@@ -79,8 +73,7 @@ export default new Router({
     {
       path: "/contact",
       name: "Contact",
-      component: () =>
-        import(/* webpackChunkName: "contact" */ "../views/Contact.vue")
+      component: () => import("../views/Contact.vue")
     },
     {
       path: "/contact_m",

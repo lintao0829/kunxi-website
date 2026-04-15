@@ -16,46 +16,16 @@ axios.defaults.transformRequest = [function(data) {
   return ret;
 }];
 
-import Viewer from "v-viewer";
-import "../node_modules/viewerjs/dist/viewer.css";
-Vue.use(Viewer);
-Viewer.setDefaults({
-  Options: {
-    inline: true,
-    button: true,
-    navbar: true,
-    title: true,
-    toolbar: true,
-    tooltip: true,
-    movable: true,
-    zoomable: true,
-    rotatable: true,
-    scalable: true,
-    transition: true,
-    fullscreen: true,
-    keyboard: true,
-    url: "data-source"
-  }
-});
-
-import { VueJsonp } from "vue-jsonp";
-Vue.use(VueJsonp);
-
-import BaiduMap from "vue-baidu-map";
-Vue.use(BaiduMap, { ak: "yT1n10FkCZEe1PsQUwiOTfc7AbBvXwGx" });
-
-import VideoPlayer from "vue-video-player";
-Vue.use(VideoPlayer);
-require("video.js/dist/video-js.css");
-require("vue-video-player/src/custom-theme.css");
-
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import "swiper/dist/css/swiper.css";
 Vue.use(VueAwesomeSwiper);
 
-import Vant from "vant";
+import { VueJsonp } from "vue-jsonp";
+Vue.use(VueJsonp);
+
+import { Button, Cell, CellGroup, Image as VanImage, Icon } from "vant";
 import "vant/lib/index.css";
-Vue.use(Vant);
+Vue.use(Button).use(Cell).use(CellGroup).use(VanImage).use(Icon);
 
 import pageHeader from "./components/pageHeader";
 import pageHeader_M from "./components/pageHeader_M";
